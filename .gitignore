@@ -7,3 +7,7 @@ tags
 .gdb_history
 .vscode
 *.TMP
+
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
