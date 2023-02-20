@@ -36,6 +36,8 @@ project "bgfx"
 			"src/glcontext_glx.cpp",
 			"src/glcontext_egl.cpp"
 		}
+	filter "system:linux"
+		pic "on"
 	filter "system:macosx"
 		files
 		{
