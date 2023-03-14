@@ -16,10 +16,12 @@ project "bgfx"
 		"src/*.cpp",
 		"src/*.h"
 	}
+	
 	excludes
 	{
 		"src/amalgamated.cpp"
 	}
+	
 	includedirs
 	{
 		"%{IncludeDir.bx}",
@@ -29,6 +31,7 @@ project "bgfx"
 		"%{IncludeDir.bgfx3rdPartydxsdk}",
 		"%{IncludeDir.bgfx3rdPartyKhronos}"
 	}
+	
 	filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 		excludes
@@ -36,8 +39,11 @@ project "bgfx"
 			"src/glcontext_glx.cpp",
 			"src/glcontext_egl.cpp"
 		}
+	filter ""
 	filter "system:linux"
 		pic "on"
+		debugargs { "-bgfx_backend opengl" }
+	filter ""
 	filter "system:macosx"
 		files
 		{
@@ -47,4 +53,5 @@ project "bgfx"
 		{
 			"src/amalgamated.mm"
 		}
+	filter ""
 	setBxCompat()
