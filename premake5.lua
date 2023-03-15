@@ -40,10 +40,6 @@ project "bgfx"
 			"src/glcontext_egl.cpp"
 		}
 	filter ""
-	filter "system:linux"
-		pic "on"
-		debugargs { "-bgfx_backend opengl" }
-	filter ""
 	filter "system:macosx"
 		files
 		{
