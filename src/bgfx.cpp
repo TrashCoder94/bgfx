@@ -2754,6 +2754,8 @@ namespace bgfx
 			renderCtx = s_rendererCreator[renderer].createFn(_init);
 			if (NULL != renderCtx)
 			{
+				const char* rendererName = getRendererName(renderer);
+				BX_TRACE("Chosen renderer: %s", rendererName);
 				break;
 			}
 
